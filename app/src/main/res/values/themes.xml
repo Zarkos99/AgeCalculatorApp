@@ -5,5 +5,13 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+<!-- Custom style for date of birth DatePicker coloring -->
+    <style name="DateOfBirthPicker" >
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Divider color -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
     <style name="Theme.AgeCalculatorApp" parent="Base.Theme.AgeCalculatorApp" />
 </resources>

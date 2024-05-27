@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
@@ -10,84 +9,98 @@
     android:background="@color/gray"
     tools:context=".MainActivity">
 
+    <!-- Horizontal container for edit text and label -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
         tools:context=".MainActivity">
+        <!-- First Name label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="First Name: "
             android:paddingLeft="15sp"
             android:textColor="@color/white"/>
+        <!-- Input field for first name -->
         <EditText
             android:id="@+id/first_name_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:hint="Enter your name" />
     </LinearLayout>
 
+    <!-- Horizontal container for edit text and label -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
         tools:context=".MainActivity">
+        <!-- Last Name label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Last Name: "
             android:paddingLeft="15sp"
             android:textColor="@color/white"/>
+        <!-- Input field for last name -->
         <EditText
             android:id="@+id/last_name_field"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:hint="Enter your name" />
     </LinearLayout>
 
+    <!-- Horizontal container for Datepicker and label -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="center"
         tools:context=".MainActivity">
+        <!-- Date of Birth label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date of Birth: "
             android:paddingLeft="15sp"
             android:textColor="@color/white"/>
+        <!-- Datepicker in spinner mode with custom style for coloring -->
         <DatePicker
             android:id="@+id/dob_datepicker"
+            android:theme="@style/DateOfBirthPicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
-            android:textColorHint="@color/white"
-            android:hint="Enter your date of birth"/>
+            android:datePickerMode="spinner"
+            android:calendarTextColor="@color/white"
+            android:calendarViewShown="false"/>
     </LinearLayout>
 
+    <!-- Button to trigger age calculation -->
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Calculate age" />
+        android:textColorHint="@color/white"
+        android:hint="Calculate age"
+        android:height="60sp"/>
 
     <TextView
-        android:id="@+id/result_text"
-        android:layout_width="match_parent"
+        android:id="@+id/toast_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:visibility="gone" />
+        android:textColor="@color/white"
+        android:visibility="gone"/>
 </LinearLayout>
