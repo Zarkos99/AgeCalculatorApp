@@ -124,7 +124,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val age = today_year - m_selected_year
+        var age = today_year - m_selected_year
+        // If their birth day has not been reached yet then they are one year younger than the difference of the birth year and current year
+        if (m_selected_month > today_month || (m_selected_month == today_month && m_selected_day > today_day)) {
+            age -= 1
+        }
         return first_name + " " + last_name + " is " + age + " years old."
     }
 }

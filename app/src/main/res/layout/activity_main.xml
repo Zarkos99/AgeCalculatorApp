@@ -22,12 +22,12 @@
             android:layout_height="wrap_content"
             android:text="First Name: "
             android:paddingLeft="15sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
         <!-- Input field for first name -->
         <EditText
             android:id="@+id/first_name_field"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60sp"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
             android:textColor="@color/white"
@@ -48,12 +48,12 @@
             android:layout_height="wrap_content"
             android:text="Last Name: "
             android:paddingLeft="15sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
         <!-- Input field for last name -->
         <EditText
             android:id="@+id/last_name_field"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60sp"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
             android:textColor="@color/white"
@@ -66,15 +66,15 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="center_vertical"
         tools:context=".MainActivity">
         <!-- Date of Birth label -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date of Birth: "
-            android:paddingLeft="15sp"
-            android:textColor="@color/white"/>
+            android:paddingStart="15sp"
+            android:textColor="@color/white" />
         <!-- Datepicker in spinner mode with custom style for coloring -->
         <DatePicker
             android:id="@+id/dob_datepicker"
@@ -85,7 +85,7 @@
             android:layout_marginRight="20sp"
             android:datePickerMode="spinner"
             android:calendarTextColor="@color/white"
-            android:calendarViewShown="false"/>
+            android:calendarViewShown="false" />
     </LinearLayout>
 
     <!-- Button to trigger age calculation -->
@@ -95,12 +95,12 @@
         android:layout_height="wrap_content"
         android:textColorHint="@color/white"
         android:hint="Calculate age"
-        android:height="60sp"/>
+        android:height="60sp" />
 
     <TextView
         android:id="@+id/toast_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 </LinearLayout>
